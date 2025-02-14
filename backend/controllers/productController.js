@@ -29,7 +29,7 @@ exports.createProduct = async (req, res) => {
       name,
       description,
       price,
-      stock,
+      stock
     });
 
     await newProduct.save();

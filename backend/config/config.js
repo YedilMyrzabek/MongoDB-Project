@@ -1,5 +1,5 @@
 module.exports = {
-  JWT_SECRET: 'maxatchert',
-  MONGO_URI: 'mongodb://localhost:27017/ecommerce', 
+  JWT_SECRET: 'edilchert',
+  MONGO_URI: 'mongodb://127.0.0.1:27017/ecommerce', 
 };
   

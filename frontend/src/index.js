@@ -1,13 +1,17 @@
 // /src/index.js
 
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';  // Обновите импорт
 import './index.css';
 import App from './App';
+import reportWebVitals from './reportWebVitals';
 
-ReactDOM.render(
+const root = ReactDOM.createRoot(document.getElementById('root')); // Используем createRoot
+root.render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+  </React.StrictMode>
 );
+
+// Логирование производительности
+reportWebVitals(console.log);
