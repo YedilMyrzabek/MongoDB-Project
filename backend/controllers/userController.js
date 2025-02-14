@@ -22,7 +22,6 @@ exports.registerUser = async (req, res) => {
   }
 };
 
-// Аутентификация пользователя (вход)
 exports.authUser = async (req, res) => {
   const { email, password } = req.body;
   try {
