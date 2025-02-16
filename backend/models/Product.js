@@ -25,6 +25,11 @@ const productSchema = mongoose.Schema({
     type: String,
     match: /^https?:\/\/\S+\.\S+/,  // Валидация для URL (если используется изображение)
   },
+  category: {
+    type: String,
+    required: true,
+    enum: ['ноутбуки', 'смартфоны', 'часы', 'наушники'], // Ограничение на список категорий
+  }
 }, { timestamps: true }); // Автоматически добавляет поля createdAt и updatedAt
 
 // Создаем модель на основе схемы
