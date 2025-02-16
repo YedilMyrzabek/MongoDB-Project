@@ -1,5 +1,4 @@
 module.exports = {
   JWT_SECRET: 'edilchert',
-  MONGO_URI: 'mongodb://127.0.0.1:27017/ecommerce', 
+  MONGO_URI: 'mongodb+srv://maxat:maxat2025@cluster0.v6x1y.mongodb.net/?retryWrites=true&w=majority',
 };
-  
