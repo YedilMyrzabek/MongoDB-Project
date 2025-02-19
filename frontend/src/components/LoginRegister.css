@@ -1,0 +1,109 @@
+/* src/components/LoginRegister.css */
+
+/* Локальные стили для LoginRegister */
+.login-register {
+    max-width: 450px;
+    width: 100%;
+    background-color: #1d1d1d; /* Темный контейнер */
+    border-radius: 15px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 0 30px rgba(155, 77, 255, 0.4); /* Неоновая тень вокруг панели */
+    transition: box-shadow 0.3s ease-in-out;
+    margin-left: 450px;
+  }
+  
+  h2 {
+    font-size: 28px;
+    color: #f1f1f1;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .input-group {
+    margin-bottom: 20px;
+    position: relative;
+  }
+  
+  input {
+    width: 100%;
+    padding: 16px;
+    border-radius: 10px;
+    border: 2px solid #333;
+    background-color: #2a2a2a;
+    color: #fff;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+  }
+  
+  input:focus {
+    border-color: #9b4dff; /* Неоновый фиолетовый */
+    outline: none;
+    box-shadow: 0 0 10px rgba(155, 77, 255, 0.7);
+  }
+  
+  button {
+    width: 100%;
+    padding: 16px;
+    border-radius: 10px;
+    background-color: #9b4dff; /* Неоновый фиолетовый */
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: none;
+    margin-top: 10px;
+  }
+  
+  button:hover:not(:disabled) {
+    background-color: #7a36cc; /* Более темный фиолетовый на ховере */
+  }
+  
+  button:disabled {
+    background-color: #555;
+    cursor: not-allowed;
+  }
+  
+  .toggle {
+    margin-top: 20px;
+  }
+  
+  .toggle button {
+    background-color: transparent;
+    border: none;
+    color: #9b4dff; /* Неоновый фиолетовый */
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+  }
+  
+  .toggle button:hover {
+    color: #7a36cc; /* Более темный фиолетовый */
+  }
+  
+  .welcome-container {
+    padding: 20px;
+  }
+  
+  p {
+    font-size: 16px;
+    color: #f1f1f1;
+  }
+  
+  @media (max-width: 600px) {
+    .login-register {
+      padding: 20px;
+    }
+  
+    h2 {
+      font-size: 24px;
+    }
+  
+    input, button {
+      font-size: 14px;
+    }
+  }
+  

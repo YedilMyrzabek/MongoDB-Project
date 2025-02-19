@@ -1,7 +1,6 @@
 const jwt = require('jsonwebtoken');
 const config = require('../config/config');
 
-// Middleware для проверки токена
 module.exports = (req, res, next) => {
   const token = req.header('Authorization');
   if (!token) {
