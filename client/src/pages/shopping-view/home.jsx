@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
-import bannerOne from "../../assets/banner-1.webp";
-import bannerTwo from "../../assets/banner-2.webp";
-import bannerThree from "../../assets/banner-3.webp";
+import bannerOne from "../../assets/banner-1.png";
+import bannerTwo from "../../assets/banner-2.jpg";
+import bannerThree from "../../assets/banner.webp";
 import phoneIcon from "/src/assets/icons/phone.svg";
 import watchIcon from "/src/assets/icons/watch.svg";
 import laptopIcon from "/src/assets/icons/laptop.svg";
@@ -51,7 +51,6 @@ const categoriesWithIcon = [
   { id: "footwear", label: "Television", icon: () => <img src={televisionIcon} alt="Television" className="w-12 h-12 mb-4" /> },
 ];
 
-
 const brandsWithIcon = [
   { id: "nike", label: "Apple", icon: () => <img src={apple} alt="Apple" className="w-12 h-12 mb-4" /> },
   { id: "adidas", label: "Samsung", icon: () => <img src={samsung} alt="Samsung" className="w-12 h-12 mb-4" /> },
@@ -60,13 +59,18 @@ const brandsWithIcon = [
   { id: "zara", label: "Huawei", icon: () => <img src={huawei} alt="Huawei" className="w-12 h-12 mb-4" /> },
   { id: "h&m", label: "Google", icon: () => <img src={google} alt="Google" className="w-12 h-12 mb-4" /> },
 ];
+
 function ShoppingHome() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const { productList, productDetails } = useSelector(
     (state) => state.shopProducts
   );
-  const { featureImageList } = useSelector((state) => state.commonFeature);
-
+  const [featureImageList, setFeatureImageList] = useState([
+    { image: bannerOne },
+    { image: bannerTwo },
+    { image: bannerThree },
+  ]);
+  
   const [openDetailsDialog, setOpenDetailsDialog] = useState(false);
 
   const { user } = useSelector((state) => state.auth);
