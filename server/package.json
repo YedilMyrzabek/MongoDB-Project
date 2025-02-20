@@ -1,0 +1,30 @@
+{
+  "name": "mongodb-project",
+  "version": "1.0.0",
+  "description": "/project\r   /backend\r     /config\r       - db.js                 # Подключение к базе данных MongoDB\r       - config.js             # Конфигурационные данные (например, JWT секреты, URL БД)\r     /models\r       - User.js               # Модель пользователя (аутентификация, данные)\r       - Product.js            # Модель товара (информация о товаре)\r       - Review.js             # Модель отзыва (отзывы пользователей)\r       - Order.js              # Модель заказа (покупка, статус)\r     /routes\r       - userRoutes.js         # Роуты для пользователей (регистрация, вход)\r       - productRoutes.js      # Роуты для товаров (добавление, изменение, удаление товаров)\r       - reviewRoutes.js       # Роуты для отзывов (добавление, изменение)\r       - orderRoutes.js        # Роуты для заказов (создание, обновление)\r     /controllers\r       - userController.js     # Логика для управления пользователями (регистрация, аутентификация)\r       - productController.js  # Логика для управления товарами (CRUD)\r       - reviewController.js   # Логика для управления отзывами\r       - orderController.js    # Логика для обработки заказов\r     /middleware\r       - authMiddleware.js     # Middleware для проверки аутентификации пользователей\r     server.js                # Основной файл для запуска сервера\r     .env                     # Переменные окружения (например, секреты, порты)\r   /frontend\r     /public\r       - index.html           # Основной HTML файл\r     /src\r       /components\r         - Header.js          # Компонент для заголовка сайта\r         - ProductList.js     # Компонент для отображения списка товаров\r         - ProductCard.js     # Компонент для отображения карточки товара\r         - ProductDetails.js  # Страница с подробной информацией о товаре\r         - Cart.js            # Компонент корзины покупок\r         - Checkout.js        # Компонент оформления заказа\r         - Login.js           # Компонент для страницы входа\r         - Register.js        # Компонент для страницы регистрации\r         - ReviewForm.js      # Форма для добавления отзыва\r       /pages\r         - HomePage.js        # Главная страница\r         - ProductPage.js     # Страница с товаром\r         - CartPage.js        # Страница корзины\r         - CheckoutPage.js    # Страница оформления заказа\r         - LoginPage.js       # Страница входа\r         - RegisterPage.js    # Страница регистрации\r       /utils\r         - api.js             # Утилита для работы с API (axios или fetch)\r       App.js                 # Основной компонент приложения\r       index.js               # Точка входа для React\r   /node_modules\r   .gitignore                # Игнорируемые файлы для git\r   package.json              # Зависимости и конфигурация проекта\r   README.md                 # Документация по проекту",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YedilMyrzabek/MongoDB-Project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/YedilMyrzabek/MongoDB-Project/issues"
+  },
+  "homepage": "https://github.com/YedilMyrzabek/MongoDB-Project#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.10.0"
+  }
+}
