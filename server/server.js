@@ -28,21 +28,20 @@ const PORT = process.env.PORT || 5000;
 
 app.use(
   cors({
-    origin: [
-      "http://localhost:5173",
-      "https://d386-185-13-23-223.ngrok-free.app", // Добавляем ngrok
-    ],
+    origin: (origin, callback) => {
+      if (!origin || origin.includes("localhost") || origin.endsWith(".ngrok-free.app")) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
     methods: ["GET", "POST", "DELETE", "PUT"],
-    allowedHeaders: [
-      "Content-Type",
-      "Authorization",
-      "Cache-Control",
-      "Expires",
-      "Pragma",
-    ],
+    allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true,
   })
 );
+
+
 
 
 app.use(cookieParser());
