@@ -129,12 +129,12 @@ export const shoppingViewHeaderMenuItems = [
   },
   {
     id: "footwear",
-    label: "Headphone",
+    label: "Television",
     path: "/shop/listing",
   },
   {
     id: "accessories",
-    label: "Television",
+    label: "Headphone",
     path: "/shop/listing",
   },
   {
